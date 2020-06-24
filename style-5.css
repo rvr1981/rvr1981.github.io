@@ -1,3 +1,6 @@
+/* Browser resets */
+img { display: block; width: 100%; height: auto }
+
 /* Web page */
 body {
     background-color: #FFFFBD;
@@ -44,4 +47,7 @@ p {
     line-height: 1.6;
     margin-top: 0;
     margin-bottom: 22px;
+}
+img {
+   box-shadow: 5px 5px grey;
 }

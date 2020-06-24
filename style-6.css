@@ -1,3 +1,6 @@
+/* Browser resets */
+img { display: block; width: 100%; height: auto }
+
 /* Web page */
 body { 
     padding-left: 20%;
