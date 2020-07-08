@@ -1,12 +1,12 @@
 /*  ============= WEB BROWSER RESETS ============ */
 * { margin: 0; padding: 0; border: 0; box-sizing: border-box }
 html { height: 100% }
-body { min-height: 100% }  
+body { min-height: 100%; min-width: 320px; max-width: 1600px; margin-left: auto; margin-right: auto }  
 img { width: 100%; height: auto; display: block }
-
 
 /* Desktops */
 @media all and (min-width:768px) { .container-block { padding: 4% 18% } }
+
 
 /* Mobiles */
 @media all and (max-width:767px) { .container-block { padding: 12% 8% } }
@@ -15,6 +15,7 @@ img { width: 100%; height: auto; display: block }
 .container-block h1 {
 	font-family: 'Fira Sans', sans-serif;
     font-size: 84px;
+    font-size: calc(44px + (84 - 44) * ((100vw - 320px) / (1600 - 320)));
     color: #1435b3;
     letter-spacing: -3px;
     text-align: center;
@@ -26,6 +27,7 @@ img { width: 100%; height: auto; display: block }
 .container-block h2 {
 	font-family: 'Fira Sans', sans-serif;
     font-size: 28px;
+    font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1600 - 320)));
     color: #696969;
     line-height: 1.6;
     text-align: center;
@@ -36,6 +38,7 @@ img { width: 100%; height: auto; display: block }
 .container-block h3 {
 	font-family: 'Fira Sans', sans-serif;
     font-size: 48px;
+    font-size: calc(26px + (48 - 26) * ((100vw - 320px) / (1600 - 320)));
     letter-spacing: -3px;
     color: #000;
     margin-bottom: 12px;
@@ -46,10 +49,17 @@ img { width: 100%; height: auto; display: block }
 .container-block p {
     font-family: 'Arvo', sans-serif;
     font-size: 20px;
-    color: #2F4F4F;
-    line-height: 1.8;   
+    font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (1600 - 320)));
+    color: #2F4F4F;  
     margin-bottom: 20px;
 }
+
+/* Desktops */
+@media all and (min-width:768px) {.container-block p{ line-height: 1.8}}
+
+/* Mobiles */
+@media all and (max-width:767px) {.container-block p{ line-height: 1.6}}
+
 
 /* Last paragraph at bottom of container block */
 .container-block p:last-child { margin-bottom: 0; }
